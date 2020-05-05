@@ -1,0 +1,9 @@
+.edhover:hover {
+  text-decoration: none;
+  color: #222326;
+  background: #ededf3;
+  transition: all 0.2s;
+  box-shadow: 5px 5px 15px 5px;
+}
+
+/*# sourceMappingURL=variables.css.map */

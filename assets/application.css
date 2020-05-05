@@ -1,0 +1,60 @@
+@import "css/bem-elements/header/header.desktop.css";
+@import "css/bem-elements/news/anons.css";
+@import "css/bootstrap/bootstrap.css";
+.aside_menu {
+  background: rgba(206, 212, 227, 0.73);
+}
+.aside_menu__item {
+  display: block;
+  color: #222326;
+  font-family: "Noto Sans", "Roboto", Ubuntu, Arial, serif;
+  text-decoration: none;
+}
+.aside_menu__item__link {
+  display: block;
+  text-decoration: none;
+  color: #222326;
+  font-size: 12pt;
+  padding: 10px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-size: cover;
+  background: url(educator/layout_background.jpg) no-repeat left top fixed;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.body_container {
+  margin-top: 10px;
+  background: #6a9c4f;
+}
+
+.main_photo {
+  float: right;
+  padding: 0;
+  vertical-align: top;
+}
+
+.self_description {
+  background: rgba(206, 212, 227, 0.73);
+  padding: 10px;
+}
+
+.edhover:hover {
+  text-decoration: none;
+  color: #222326;
+  background: #ededf3;
+  transition: all 0.2s;
+  box-shadow: 5px 5px 15px 5px;
+}
+
+/*# sourceMappingURL=application.css.map */

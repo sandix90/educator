@@ -1,0 +1,27 @@
+.header {
+  padding-left: 10px;
+  background: rgba(206, 212, 227, 0.73);
+}
+.header__main_text {
+  color: #222326;
+  font-size: 26pt;
+}
+.header__small_text {
+  padding-bottom: 10px;
+}
+.header__menu__item {
+  height: 100%;
+  background: rgba(206, 212, 227, 0.73);
+}
+.header__menu__item__link {
+  display: block;
+  height: 100%;
+  color: #222326;
+  font-family: "Noto Sans", "Roboto", Ubuntu, Arial, serif;
+  font-size: 12pt;
+  text-decoration: none;
+  padding-left: 10px;
+  vertical-align: center;
+}
+
+/*# sourceMappingURL=header.desktop.css.map */

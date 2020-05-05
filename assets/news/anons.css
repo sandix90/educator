@@ -1,0 +1,16 @@
+.news_anons {
+  margin-top: 10px;
+  background: rgba(206, 212, 227, 0.73);
+}
+.news_anons__dir_title {
+  padding: 10px;
+}
+.news_anons__item {
+  border-bottom: 1px;
+  padding: 10px;
+}
+.news_anons__title {
+  padding-left: 10px;
+}
+
+/*# sourceMappingURL=anons.css.map */

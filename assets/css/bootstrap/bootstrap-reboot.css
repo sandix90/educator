@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *    ,
+ * 29 |   -webkit-tap-highlight-color: rgba($black, 0); // 5
+ *    |                                     ^^^^^^
+ *    '
+ *   _reboot.scss 29:37          @import
+ *   bootstrap-reboot.scss 12:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 29 \2502    -webkit-tap-highlight-color: rgba($black, 0); // 5\a    \2502                                      ^^^^^^\a    \2575 \a   _reboot.scss 29:37          @import\a   bootstrap-reboot.scss 12:9  root stylesheet";
+}

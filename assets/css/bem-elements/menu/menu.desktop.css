@@ -1,0 +1,33 @@
+.edhover:hover {
+  text-decoration: none;
+  color: #222326;
+  background: #ededf3;
+  transition: all 0.2s;
+  box-shadow: 5px 5px 15px 5px;
+}
+
+.aside_menu {
+  background: rgba(206, 212, 227, 0.73);
+}
+.aside_menu__item {
+  display: block;
+  color: #222326;
+  font-family: "Noto Sans", "Roboto", Ubuntu, Arial, serif;
+  text-decoration: none;
+}
+.aside_menu__item__link {
+  display: block;
+  text-decoration: none;
+  color: #222326;
+  font-size: 12pt;
+  padding: 10px;
+}
+.aside_menu__item__link:hover {
+  text-decoration: none;
+  color: #222326;
+  background: #ededf3;
+  transition: all 0.2s;
+  box-shadow: 5px 5px 10px 0;
+}
+
+/*# sourceMappingURL=menu.desktop.css.map */

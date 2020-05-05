@@ -1,0 +1,18 @@
+{% load static %}
+<div class="news_anons">
+
+    <div class="news_anons__dir_title">
+        <a href="{% url 'news_list' %}">Новости</a>
+    </div>
+
+    {% for item in news_anons %}
+        <div class="news_anons__item">
+            <div class="date">
+                {{ item.created_at }}
+            </div>
+            <div class="news_anons__title">
+                {{ item.title }}...
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+version: "3.6"
+services:
+  educator:
+    image: educator:local
+    container_name: educator
+    ports:
+      - "8081:80"
+    environment:
+      DJANGO_SETTINGS: "educator.settings"
+    networks:
+      - site
+
+networks:
+  site:
+    driver: bridge
+    external: true
