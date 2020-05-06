@@ -218,4 +218,3 @@ venv.bak/
 
 /tests/.pytest_cache/
 /static
-db.sqlite3
