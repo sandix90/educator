@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="row mt-2">
+        <div class="col-3"><img class="img-fluid" src={% static "css/educator/iam.jpg" %}></div>
+        <div class="col-6">
+            <div class="stylized">
+                <div class="tz-gallery">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/park.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/park.jpg' %}" alt="Park">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/bridge.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/bridge.jpg' %}" alt="Bridge">
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/tunnel.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/tunnel.jpg' %}" alt="Tunnel">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/coast.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/coast.jpg' %}" alt="Coast">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/rails.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/rails.jpg' %}" alt="Rails">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/traffic.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/traffic.jpg' %}" alt="Traffic">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/rocks.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/rocks.jpg' %}" alt="Rocks">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/benches.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/benches.jpg' %}" alt="Benches">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a class="lightbox" href="{% static 'css/bem-elements/gallery/images/sky.jpg' %}">
+                                <img src="{% static 'css/bem-elements/gallery/images/sky.jpg' %}" alt="Sky">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">{% include 'aside_menu.html' %}</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+{% endblock %}

@@ -4,9 +4,9 @@
         <div class="header">
             <div class="header__item">
 
-                <div class="header__main_text">
-                    Кривоногова Марина Ивановна
-                </div>
+{#                <div class="header__main_text">#}
+                    <a class="header__main_text" href="{% url 'main' %}">Кривоногова Марина Ивановна</a>
+{#                </div>#}
 
                 <div class="header__small_text">
                     воспитатель детского сада
@@ -19,27 +19,27 @@
 <div class="row mt-2">
     <div class="col-2">
         <div class="header__menu__item">
-            <a class="header__menu__item__link edhover" href="#">Физическое развитие</a>
+            <a class="header__menu__item__link edhover" href="{% url 'pages' 'fizicheskoe-razvitie'%}">Физическое развитие</a>
         </div>
     </div>
     <div class="col-2">
         <div class="header__menu__item">
-            <a class="header__menu__item__link edhover" href="#">Речевое развитие</a>
+            <a class="header__menu__item__link edhover" href="{% url 'pages' 'rechevoe-razvitie'%}">Речевое развитие</a>
         </div>
     </div>
     <div class="col-3">
         <div class="header__menu__item">
-            <a class="header__menu__item__link edhover" href="#">Социально-коммуникативное развитие</a>
+            <a class="header__menu__item__link edhover" href="{% url 'pages' 'socialno-kommunikativnoe-razvitie'%}">Социально-коммуникативное развитие</a>
         </div>
     </div>
     <div class="col-2">
         <div class="header__menu__item">
-            <a class="header__menu__item__link edhover" href="#">Позновательное развитие</a>
+            <a class="header__menu__item__link edhover" href="{% url 'pages' 'poznavatelno-razvitie'%}">Познавательное развитие</a>
         </div>
     </div>
     <div class="col-3">
         <div class="header__menu__item">
-            <a class="header__menu__item__link edhover" href="#">Художественно-эстетическое развитие</a>
+            <a class="header__menu__item__link edhover" href="{% url 'pages' 'hudozhestvenno-esteticheskoe-razvitie'%}">Художественно-эстетическое развитие</a>
         </div>
     </div>
 

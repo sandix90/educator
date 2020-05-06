@@ -119,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Yekaterinburg'
 
 USE_I18N = True
 
@@ -168,7 +168,6 @@ CONSTANCE_DATABASE_PREFIX = 'constance:educator:'
 CONSTANCE_CONFIG = OrderedDict(
     {
         'INDEX_TEXT': ('', 'Текст главной страницы'),
-        'ABOUT_US': ('', 'О нас'),
     }
 )
 CONSTANCE_ADDITIONAL_FIELDS = {

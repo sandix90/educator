@@ -5,27 +5,28 @@
     <div class="row mt-2">
 
         <div class="col-3">
-            <img class="img-fluid" src={% static "educator/iam.jpg" %}>
+            <img class="img-fluid" src={% static "css/educator/iam.jpg" %}>
 
         </div>
         <div class="col-6">
             {% for news_piece in news %}
-                <div>
-                    {{ news_piece.title }}
-                </div>
-                <div>
-                    {{ news_piece.created_at }}
-                </div>
+                <div class="stylized">
+                    <div>
+                        <a href="{% url 'news_detail' news_piece.id %}">{{ news_piece.title }}</a>
+                    </div>
+                    <div>
+                        {{ news_piece.created_at }}
+                    </div>
 
-                <div>
-                    {{ news_piece.text | safe }}
+                    <div>
+                        {{ news_piece.get_anons | safe }}...
+                    </div>
                 </div>
             {% endfor %}
         </div>
 
         <div class="col-3">
             {% include 'aside_menu.html' %}
-            <div style="background: #1c7430; height: 200px"></div>
         </div>
 
     </div>

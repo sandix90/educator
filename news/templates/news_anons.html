@@ -11,7 +11,7 @@
                 {{ item.created_at }}
             </div>
             <div class="news_anons__title">
-                {{ item.title }}...
+                {{ item.title }}... <a href="{% url 'news_detail' item.id %}">подробнее</a>
             </div>
         </div>
     {% endfor %}

@@ -1,30 +1,19 @@
-"""educator URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 
-import news
-from educator.views import Main
+from educator.views import Main, FeedbackView, FeedbackSuccessView, PageDetailView, GalleryView
 
 urlpatterns = [
-    path('', Main.as_view()),
+    path('', Main.as_view(), name='main'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     path('admin/', admin.site.urls),
-    path('news/', include('news.urls'))
+    path('news/', include('news.urls')),
+    path('feedback/', FeedbackView.as_view(), name='feedback'),
+    path('feedback/success', FeedbackSuccessView.as_view(), name='feedback_success'),
+    path('<slug:slug>', PageDetailView.as_view(), name='pages'),
+    path('gallery/', GalleryView.as_view(), name='gallery')
 ]
 urlpatterns += staticfiles_urlpatterns()

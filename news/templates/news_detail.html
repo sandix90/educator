@@ -1,27 +1,22 @@
 {% extends 'base.html' %}
-{% load static news_extras %}
+
+{% load static %}
 
 {% block body %}
-
     <div class="row mt-2">
         <div class="col-3">
             <img class="img-fluid" src={% static "css/educator/iam.jpg" %}>
-
-            {% news_anons %}
         </div>
-
         <div class="col-6">
-            <div class="self_description">
-                {{ constance.INDEX_TEXT | safe }}
+            <div class="stylized">
+                <div>{{ object.title }}</div>
+                <div>{{ object.created_at }}</div>
+                <div>{{ object.text| safe }}</div>
             </div>
 
         </div>
-
         <div class="col-3">
             {% include 'aside_menu.html' %}
         </div>
-
     </div>
-
-
 {% endblock %}

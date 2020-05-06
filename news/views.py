@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from news.models import News
 
@@ -11,3 +11,7 @@ class NewsListView(ListView):
     def get_queryset(self):
         return self.model.objects.all()
 
+
+class NewsDetailView(DetailView):
+    template_name = 'news_detail.html'
+    model = News

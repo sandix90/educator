@@ -5,4 +5,4 @@ from news.models import News
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('created_at', 'title')

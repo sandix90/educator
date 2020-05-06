@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="row mt-2">
+        <div class="col-3"><img class="img-fluid" src={% static "css/educator/iam.jpg" %}></div>
+        <div class="col-6">
+            <div class="stylized">
+                {{ object.content | safe }}
+            </div>
+        </div>
+        <div class="col-3">{% include 'aside_menu.html' %}</div>
+    </div>
+{% endblock %}

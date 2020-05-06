@@ -12,7 +12,7 @@ class News(models.Model):
         verbose_name = 'Новости'
 
     def get_anons(self):
-        return self.title[:50]
+        return self.text[:50]
 
     def __str__(self):
         return self.title[:50]
