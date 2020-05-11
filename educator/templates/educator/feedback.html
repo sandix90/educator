@@ -5,7 +5,10 @@
     <div class="row mt-2">
         <div class="col-3"><img class="img-fluid" src={% static "css/educator/iam.jpg" %}></div>
         <div class="col-6">
+            {% include 'templatetags/breadcrumbs.html' %}
             <div class="stylized">
+
+
                 Если хотите связаться со мной, пожалуйста, заполните форму.
 
                 <form action="{% url 'feedback' %}" method="post" class="mt-2">

@@ -27,7 +27,7 @@ SECRET_KEY = 'ki!#8aew91p@m(j&el-5^1_izj(a%@x5qmcl04wow6@towu)h('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '80.211.30.182', 'mkrivonogova.ru']
 
 
 # Application definition
@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'constance',
     'constance.backends.database',
-    'news'
+    'news',
+    'easy_thumbnails'
 ]
 
 MIDDLEWARE = [
@@ -90,7 +91,7 @@ WSGI_APPLICATION = 'educator.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3'),
     }
 }
 
@@ -175,3 +176,8 @@ CONSTANCE_ADDITIONAL_FIELDS = {
     'char_field': ['django.forms.CharField', {'required': False}],
 }
 
+THUMBNAIL_ALIASES = {
+    '': {
+        'standard': {'size': (2560, 1600), 'quality': 50}
+    }
+}

@@ -3,12 +3,50 @@
 
 {% block body %}
     <div class="row mt-2">
-        <div class="col-3"><img class="img-fluid" src={% static "css/educator/iam.jpg" %}></div>
+        <div class="col-3">
+
+            {% if object.get_cloud_files %}
+                <div class="stylized">
+                    <div>Прикрепленные страницы:</div>
+                    <div style="padding-left: 10px">
+                        {% for cfile in object.get_cloud_files %}
+                            <lu>
+                                <li><a href="{% url 'cloud_files' cfile.slug %}">{{ cfile.name }}</a></li>
+                            </lu>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <img class="img-fluid" src={% static "css/educator/iam.jpg" %}>
+            {% endif %}
+
+        </div>
         <div class="col-6">
+            {% include 'templatetags/breadcrumbs.html' %}
             <div class="stylized">
                 {{ object.content | safe }}
+
+                <div class="tz-gallery">
+                    <div class="row">
+
+                        {% for photo in object.get_page_photos %}
+                            <div class="col-sm-6 col-md-4">
+                                <a class="lightbox" href="{{ photo.image.url }}">
+                                    <img src="{{ photo.image.url }}" alt="{{ photo.name }}">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="col-3">{% include 'aside_menu.html' %}</div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+
 {% endblock %}

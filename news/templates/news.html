@@ -9,8 +9,11 @@
 
         </div>
         <div class="col-6">
+            {% include 'templatetags/breadcrumbs.html' %}
+
             {% for news_piece in news %}
                 <div class="stylized">
+
                     <div>
                         <a href="{% url 'news_detail' news_piece.id %}">{{ news_piece.title }}</a>
                     </div>

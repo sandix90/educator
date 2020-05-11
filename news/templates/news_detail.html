@@ -8,7 +8,9 @@
             <img class="img-fluid" src={% static "css/educator/iam.jpg" %}>
         </div>
         <div class="col-6">
+            {% include 'templatetags/breadcrumbs.html' %}
             <div class="stylized">
+
                 <div>{{ object.title }}</div>
                 <div>{{ object.created_at }}</div>
                 <div>{{ object.text| safe }}</div>

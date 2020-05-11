@@ -101,6 +101,25 @@ body {
   box-shadow: 5px 5px 15px 5px;
 }
 
+.spinner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 107px;
+  opacity: 0.7;
+  background-color: rgba(21, 65, 139, 0.87);
+  color: #fff;
+  z-index: 9999;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.spinner > img {
+  position: relative;
+  top: 40%;
+  left: 40%;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

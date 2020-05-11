@@ -9,6 +9,11 @@ services:
       DJANGO_SETTINGS: "educator.settings"
     networks:
       - site
+    volumes:
+      - db_data:/app/db
+
+volumes:
+  db_data:
 
 networks:
   site:
